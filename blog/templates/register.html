@@ -1,0 +1,19 @@
+<h1>Register Page</h1>
+{%for message in messages%}
+<h1 style="background-color: red;">
+{{message}}
+</h1>
+{%endfor%}
+
+<form action="register" method="Post">
+    {%csrf_token%}
+        <p>Enter you name</p>
+        <input type="text" name="username"/>
+        <p>Enter your Password</p>
+        <input type="password" name="password"/>
+        <p></p>
+        <p>Enter your Email</p>
+        <input type="email" name="email"/>
+        <p></p>
+        <input type="submit" name="login"/>
+</form>
